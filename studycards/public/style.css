@@ -1,0 +1,153 @@
+
+
+body{
+    margin: 0;
+    background-color: #fefefe;
+}
+a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fefefe;
+    padding: 15px 20px 10px 20px;
+    
+
+}
+
+.Slogo{
+    height: 30px;
+    width: 150px;
+    left: 25px;
+    top: 10px;
+    position: fixed;
+}
+.Navbar{
+    background-color: #2980B9;
+    display: flex;
+    height: 50px;
+    widows: 100%;
+    position: relative;
+
+}
+ .Nlnavitem > li {
+    list-style: none;
+    display: inline-block;
+    height: -10px;
+    margin: 0px 35px 0px 20px;
+    position: relative;
+    left: 160px;
+}
+.Mlogo{
+    display: none;
+}
+
+ul > li > a::before{
+    content: "";
+    align-content: center;
+    background-color: #fefefe;
+    width:0px;
+    display: block;
+    border-radius: 3px;
+    height: 10px;
+    position: absolute;
+}
+ 
+ul >  li > a:hover::before{
+    transition-duration: 200ms;
+    width: 100%;
+    top: 27px;
+
+}
+
+
+/* Responsive Media Queries for Tablets*/
+@media(max-width: 780px){
+    .Navbar{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 10px 76px 0 0;
+    }
+    .Nlnavitem{
+        width: 50%;
+        left: 50%;
+        display: flex;
+    }
+    a {
+        padding: 15px 25px 0px 0px;
+    }
+    ul >  li > a:hover::before{
+        transition-duration: 200ms;
+        width: 100%;
+        top: 50px;
+    
+    }
+}
+
+/* Responsive Media Queries for Mobile Phone*/
+@media(max-width: 360px){
+    ul li a::before{
+        display: none;
+    }
+    body{
+        padding: 0;
+    }
+    a{
+        color: #fefefe;
+        font-size: 30px;
+        padding: 10px 0;
+        display: flex;
+        
+    }
+    a#decks{
+        padding-right: 15px;
+        
+    }
+
+    ul > li:nth-child(5){
+        border: 1px solid orangered;
+        background-color: orangered;
+        border-radius: 15px; 
+        padding: 5px 0px 10px 200px;
+        margin-top: 5px;
+        
+    }
+    
+    a#login{
+        /* border: 1px solid orangered;
+        background-color: orangered;
+        border-radius: 15px; 
+        padding: 10px 10px 10px 200px;
+        margin-top: 5px; */
+        right: 100px;
+        padding: 10px 10px 10px 10px;
+        position: relative;
+    }
+    a#login:active{
+        color: #2980B9;
+    }
+    a:active{
+        color: orangered;
+    }
+    
+    .Slogo{
+        height: 20%;
+        width: 40%;
+    }
+
+    .Navbar{
+        background-color: #2980B9;
+        display: flex;
+        height: 355px;
+        
+        padding-right: 305px;
+        
+    }
+    .Nlnavitem{
+        display: block;
+        padding: 0;
+        margin: 0;
+        top: 10px;
+        position: relative; 
+    }
+
+}
