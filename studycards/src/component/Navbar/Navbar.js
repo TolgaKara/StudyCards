@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Slogo from "../img/Gruppe24.png"
-import Nlnavitem from "./Nlnavitem";
-import Mobile from "./Mobile"
+import Nlnavitem from "./Nlnavitem"
+import "./Navbar.css"
 
 
 class Navbar extends Component {
@@ -10,7 +10,7 @@ class Navbar extends Component {
             <div className="Navbar">
             <img className="Slogo" src={Slogo} alt="Logo of Studydrive"/>
             <Nlnavitem />
-            <Mobile />
+
         
 
 
