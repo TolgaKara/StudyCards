@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -28,6 +29,24 @@
     <title>React App</title>
   </head>
   <body>
+      <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        const config = {
+          apiKey: "AIzaSyAP3wfQxrWuybKwDdC9cGvvtYjBSev9z7Y",
+          authDomain: "studycards-2758b.firebaseapp.com",
+          databaseURL: "https://studycards-2758b.firebaseio.com",
+          projectId: "studycards-2758b",
+          storageBucket: "studycards-2758b.appspot.com",
+          messagingSenderId: "613359598633"
+        };
+        firebase.initializeApp(config);
+        
+      </script>
+
+
+
+
 
     <label for="nav-toggle" class="nav-toggle-label">
       <span></span>

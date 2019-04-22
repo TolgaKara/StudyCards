@@ -8,10 +8,12 @@
 @import "/src/component/Pages/Features/Features.css";
 @import "/src/component/Pages/Login/Login.css";
 @import "/src/component/Footer/Footer.css";
+@import "/src/component/Pages/Sign/Sign.css";
 
 body{
     margin: 0;
     background-color: #fefefe;
+    
 }
 
 

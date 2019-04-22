@@ -1,8 +1,24 @@
-a{
+.Navitem{
+    margin: 0 0 0 40%;
+}
+
+.Nlnavitem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-auto-rows: minmax(50px, auto);
+    align-items: center;
+    text-align: center;
+
+}
+
+ .Nlnavitem a{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: #fefefe;
-    padding: 15px 20px 10px 20px;
+    font-size: 25px;
+    
+    
 }
 .Navbar{
     background-color: #2980B9;
@@ -15,10 +31,8 @@ a{
  .Nlnavitem > li {
     list-style: none;
     display: inline-block;
-    margin: 0.5em;
-    position: relative;
-    left: 160px;
     
+    position: relative;
 }
  ul > li > a::before{
     content: "";
@@ -33,6 +47,6 @@ a{
 ul >  li > a:hover::before{
     transition-duration: 200ms;
     width: 100%;
-    top: 37px;
+    top: 49px;
 
 }

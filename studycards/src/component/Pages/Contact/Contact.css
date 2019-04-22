@@ -1,0 +1,77 @@
+.contactWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.contactWrapper div {
+    grid-column: 2;
+    text-align: center;
+}
+.contactTitle{
+    padding-top: 100px;
+}
+.contactTitle h1{
+    font-size: 40px;
+    color: #2980B9;
+    margin-bottom: 0;
+}
+.contactTitle p{
+    font-size: 20px;
+    margin-bottom: 50px;
+
+}
+
+.contactInput input, #messageBox{
+    border-style: none;
+    border-radius: 10px;
+    border: 1.5px #2980B9 solid;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    outline-style: none;
+}
+.contactInput div {
+    margin: 0.5em;
+    
+}
+
+#personalBox{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0.5em;
+}
+#subjectBox{
+    padding-left: 10px;
+    padding-right: 34%;
+
+}
+
+div .sendButton {
+    text-align: right;
+    margin-right: 20%;
+}
+#sendBtn{
+    font-size: 18px;
+    border-style: none;
+    border-radius: 10px;
+    border: 1.5px #2ECC71 solid;
+    
+    padding: 15px 70px;
+    margin-bottom: 100px;
+    background-color: #fefefe;
+    color: #2ECC71;
+
+    font-weight: bold;
+    outline-style: none;
+}
+#messageBox{
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#sendBtn:hover{
+    padding: 20px 73px;
+
+    transition-duration: 300ms;
+}

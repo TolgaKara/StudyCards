@@ -1,29 +1,21 @@
 import React from "react"
-import "./Features.css"
 import { Link } from "react-router-dom"
 
-import imgFeature from "./img/Gruppe94.png"
-import CloudOff from "./img/cloud-img-off.png"
-import CodingOff from "./img/coding-img-off.png"
-import CommunityOff from "./img/community-img-off.png"
-import ProgressOff from "./img/progress-img-off.png"
-import ResponsiveOff from "./img/responsive-img-off.png"
-import EducationOff from "./img/education-img-off.png"
-import CloudOn from "./img/cloud-img-on.png"
-import CodingOn from "./img/coding-img-on.png"
-import CommunityOn from "./img/community-img-on.png"
-import ProgressOn from "./img/progress-img-on.png"
-import ResponsiveOn from "./img/responsive-img-on.png"
-import EducationOn from "./img/education-img-on.png"
+import imgFeature from "../img/Gruppe94.png"
+import CloudOff from "../img/cloud-img-off.png"
+import CodingOff from "../img/coding-img-off.png"
+import CommunityOff from "../img/community-img-off.png"
+import ProgressOff from "../img/progress-img-off.png"
+import ResponsiveOff from "../img/responsive-img-off.png"
+import EducationOff from "../img/education-img-off.png"
+import CloudOn from "../img/cloud-img-on.png"
+import CodingOn from "../img/coding-img-on.png"
+import CommunityOn from "../img/community-img-on.png"
+import ProgressOn from "../img/progress-img-on.png"
+import ResponsiveOn from "../img/responsive-img-on.png"
+import EducationOn from "../img/education-img-on.png"
 
-
-
-
-
-class Features extends React.Component{
-
-
-
+class ResponsiveFeatures extends React.Component{
     render(){
         return(
             <div className="featuresWrapper">
@@ -39,7 +31,7 @@ class Features extends React.Component{
                 </div>
                 <div className="imgWrapper">
                     <div id="educationImg">
-                        <img src={EducationOn} id="educationOff"/>
+                        <Link to="/features"><img src={EducationOff} id="educationOff"/></Link>
                     </div>
                     <div id="cloudImg">
                        <Link to="/features/cloud"> <img src={CloudOff}/> </Link>
@@ -48,7 +40,7 @@ class Features extends React.Component{
                         <Link to="/features/community"><img src={CommunityOff}/></Link>
                     </div>
                     <div id="responsiveImg">
-                        <Link to="/features/responsive"><img src={ResponsiveOff}/></Link>
+                        <Link to="/features/responsive"><img src={ResponsiveOn}/></Link>
                     </div>
                     <div id="progressImg">
                         <Link to="/features/progress"><img src={ProgressOff}/></Link>
@@ -59,13 +51,13 @@ class Features extends React.Component{
                 </div>
                 <div className="featuresContent">
                     <div>
-                        <h3 id="featuresTitle">Education</h3><br/>
+                        <h3 id="featuresTitle">Responsive</h3><br/>
                         <p>Non officia ex aute amet labore Lorem ut. 
-                        Culpa occaecat culpa irure officia eiusmod sint ad magna ut laborum. Sunt adipisicing ullamco eiusmod elit cupidatat irure esse pariatur. 
+                        Culpa occaecat culpa irure officia eiusmod sint ad magna ut laborum. Sunt adipisicing ullamco eiusmod elit cupidatat irure esse pariatur.
+                        Laborum dolor esse velit eu incididunt laborum minim exercitation eu cillum deserunt dolore cupidatat amet. 
                         Cupidatat officia veniam eu sit. Duis commodo ut est voluptate occaecat cupidatat culpa.
                         Et tempor anim aute ex sint do ad aliquip consectetur labore ad in proident nisi. 
                         Laboris proident excepteur laboris est commodo amet sit sit quis quis. 
-                        Laborum dolor esse velit eu incididunt laborum minim exercitation eu cillum deserunt dolore cupidatat amet.
                         Voluptate elit adipisicing labore sit eu est in veniam tempor sint sunt anim dolore quis.
                         </p>
                         <ul>
@@ -81,4 +73,4 @@ class Features extends React.Component{
     }
 }
 
-export default Features
+export default ResponsiveFeatures

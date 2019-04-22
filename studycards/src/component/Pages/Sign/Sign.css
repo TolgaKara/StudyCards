@@ -25,7 +25,7 @@
     top: 50%;
     position: relative;
 }
-.Lbtn > button, #Sbtn{
+#Signbtn, #Loginbtn{
     border-style: none;
     border-radius: 10px;
     margin: 0;
@@ -34,12 +34,12 @@
     font-size: 20px;
     background-color: #fefefe;
 }
-#Lobtn{
+#Loginbtn{
     margin-left: 20% ;
     
 }
-#Sbtn{
-    margin: 0 20% 0 0 ;
+#Signbtn{
+    margin-right: 20%;
 }
 
 .Linput{
@@ -52,7 +52,7 @@
     padding: 10px;
 }
 
-#Pid{
+#Pid, #Kid{
     margin-top: 10px;
 }
 .Linput > button {
@@ -65,7 +65,6 @@
     margin-top: 20px;
     padding: 10px 20px 10px 20px;
     width: 34%;
-    outline-style: none;
 }
 
 .Linput > button:hover{
@@ -75,7 +74,7 @@
     transition-duration: 300ms;
 }
 
-div.Lbtn > button.active{
+#Signbtn.active{
     background-color: #3498DB;
     color:#fefefe;
 }

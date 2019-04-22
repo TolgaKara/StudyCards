@@ -1,0 +1,66 @@
+.featuresWrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+}
+.featuresWrapper h1{
+    color: #2980B9;
+    font-size: 40px;
+    margin-top: 50px;
+}
+.featuresWrapper p{
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.featuresMainImg{
+    width: 70%;
+    height: 100%;
+}
+
+.featuresContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.featuresContent div{
+    grid-column: 2;
+}
+
+#featuresTitle{
+    color: #2980B9;
+    font-size: 30px;
+}
+#featuresTitle p{
+    font-size: 20px;
+}
+.featuresContent div p{
+    font-size: 20px;
+    line-height: 1.3em;
+}
+.featuresContent div ul{
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+
+.imgWrapper {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+}
+#educationImg{
+    grid-column: 9;
+}
+#cloudImg{
+    grid-column: 15;
+}
+#communityImg{
+    grid-column: 22;
+}
+#responsiveImg{
+    grid-column: 29;
+}
+#progressImg{
+    grid-column: 36;
+}
+#codingImg{
+    grid-column: 42;
+}
