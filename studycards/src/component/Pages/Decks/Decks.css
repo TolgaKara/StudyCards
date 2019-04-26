@@ -1,0 +1,56 @@
+.CreateDeckWrapper{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+.CreateDeckTitle{
+    grid-column: 2;
+}
+.CreateDeckInput {
+    grid-column: 2;
+    grid-row: 2;
+   
+}
+.DecksContent p, .CardsContent p, .ShowCards p{
+    font-size: 20px;
+    margin: 0;
+}
+.ShowCards p {
+    margin-bottom: 50px;
+}
+.DecksContent input, .CardsContent textarea{
+    border-style: none;
+    border-radius: 5px;
+    border: 1px blue solid;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+}
+#deckDesc{
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+#cardA{
+    margin: 10px 0;
+}
+#cardA, #cardQ{
+    padding-bottom: 50px;
+}
+
+.CardsShown{
+    
+    text-align: left;
+    border: 1px blue solid;
+    border-radius: 10px;
+
+    
+
+    
+}
+.CardsWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+

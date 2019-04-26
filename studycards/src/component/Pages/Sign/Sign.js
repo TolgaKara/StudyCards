@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./Sign.css"
 import fire from "../config/Firebase"
-import { error } from "util";
+
 
 class Sign extends React.Component{
     constructor(){
@@ -30,7 +30,9 @@ class Sign extends React.Component{
     
 
     createUser(){
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        // fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(() => {
+        //     fire.database().ref("newUser").on(this.state.name, this.state.vorname)
+        // })
     }
 
     

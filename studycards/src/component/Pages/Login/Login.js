@@ -1,26 +1,25 @@
 import React from 'react'
-import { withRouter, Link, Redirect } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./Login.css"
-import * as firebase from "firebase"
 import fire from '../config/Firebase'
-import Home from "../Home/Home"
+import App from "../../../App"
 import About from "../About/About"
 import Test from "../test"
-import authorizedRouter from "../../../loggedComponent/authorizedRouter"
+
 
 
 
 class Login extends React.Component{
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state= {
             email:"",
-            password:"",
-            user: null
+            password:""
+
         }
         this.onChange = this.onChange.bind(this)
         this.loginUser = this.loginUser.bind(this)
-        this.logoutUser = this.logoutUser.bind(this)
+
        
 
     }
@@ -41,24 +40,11 @@ class Login extends React.Component{
         )}
 
 
-    logoutUser(){
-        fire.auth().signOut()
-    }
-
-    authUser() {
-        fire.auth().onAuthStateChanged((user) => {
-            this.setState({user})
-            })
-    }
-    
-
-    componentDidMount(){
-        this.authUser()
-    }
     
 
     render(){
-
+        
+        
         return(
             <div className="Login">
             <div>
@@ -87,3 +73,4 @@ class Login extends React.Component{
 
 
 export default Login
+

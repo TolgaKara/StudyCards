@@ -7,46 +7,29 @@ import "./Navbar.css"
 
 
 class Nlnavitem extends React.Component{
-    constructor(){
-        super()
-        this.state={
-            user: null
-        }
-    }
-
-    componentDidMount(){
-        fire.auth().onAuthStateChanged((user) => {
-            this.setState({user})
-            })
-    }
 
 
-    
-    
+
+  
     render(){
         
-    if(this.state.user === null){
-        return(
-            <div><h1>Hey there</h1></div>
-        )
-    }else {
 
         return(
-            <div className="Navitem">
+            <div className="NavitemWrapper">
             
-                <ul className="Nlnavitem">
-                    <li><Link to ={"/about"}>About Us</Link></li>
-                    <li><Link to={"/features"}>Features</Link></li>
-                    <li><Link to={"/decks"}id="decks">Decks</Link></li>
-                    <li><Link to={"/contact"}>Contact Us</Link></li>
-                    <li><Link to={"/login"} id="login">Login</Link></li>
+                <ul className="NavItems">
+                    <li><Link to ="/about">About Us</Link></li>
+                    <li><Link to="/features">Features</Link></li>
+                    <li><Link to="/decks"id="decks">Decks</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
+                    <li><Link to="/login" id="login">Login</Link></li>
                 </ul>
             </div>
     )
     }
     }
 
-}
+
 
 
 export default Nlnavitem

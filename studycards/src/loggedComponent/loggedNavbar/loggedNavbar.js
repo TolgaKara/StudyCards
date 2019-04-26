@@ -1,14 +1,23 @@
 import React from "react"
+import LoggedNavItems from "./LoggedNavItems"
+import { Link } from "react-router-dom"
+import Slogo from "../../component/img/Gruppe24.png"
 
-class loggedNavbar extends React.Component(){
+
+class LoggedNavbar extends React.Component{
     render(){
+        
+        
         return(
-            <div>
-                <h1>Hello im the Logged Navbar</h1>
+            <div className="Navbar">
+                <img className="Slogo" src={Slogo} alt="Logo of Studydrive" />
+
+            <LoggedNavItems user={this.props.user}/>
             </div>
+
+
         )
     }
 }
 
-
-export default loggedNavbar
+export default LoggedNavbar

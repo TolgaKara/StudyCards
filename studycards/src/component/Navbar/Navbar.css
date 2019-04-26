@@ -1,18 +1,215 @@
-.Navitem{
-    margin: 0 0 0 40%;
+.Slogo{
+
+    margin: 12px 12px 12px 20px;
+}
+#categoryDropdown{
+    list-style: none;
+    margin-right: 60px;
+
+    font-size: 25px;
+    top: 15%;
+
+    position: relative;
+}
+#categoryDropdown a{
+    text-decoration: none;
+    color: #fefefe;
+}
+.LoggedNavItems{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    grid-column-gap: 1em;
+    margin-left: 100px;
+    font-size: 25px;
+    top: 8%;
+
+    position: relative;
+}
+.LoggedNavItems a{
+    text-decoration: none;
+    color: #fefefe;
 }
 
-.Nlnavitem{
+.NavitemWrapper{
+    margin: 0 0 0 30%;
+}
+.gridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-left: 5%;
+}
+.gridWrapper div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#searchfield, #searchbtn{
+    margin: 30px 0 30px 5px;
+    padding: 5px;
+    left: 200px;
+    position: relative;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #fefefe;
+}
+
+#searchbtn{
+    color: #2980B9;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#searchbtn:hover{
+    background-color: #3498DB;
+    color: #fefefe;
+    transition-duration: 250ms;
+}
+
+
+#userDropdown{
+   left: 200%;
+   position: relative;
+}
+
+.gridWrapper a{
+    padding: 29px 20px 29px 20px;
+}
+
+#userDropdown ul{
+    display: none;
+    background-color: #2980B9;
+    top: 55px;
+    height:100%, auto;
+    width: 90%, auto;
+    left:0;
+    padding: 0 0 10px 0;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    position: absolute;
+
+}
+#userDropdown:hover ul {
+    display: block;    
+}
+
+#userDropdown ul li {
+    color:#fefefe;
+    list-style: none;
+    font-size: 18px;
+    padding: 5px 100px 10px 5px;
+    
+    border-radius: 5px;
+}
+#userDropdown ul li a{
+    padding: 10px 100px 10px 5px
+}
+#userDropdown ul li:hover{
+    background-color: #3498DB;
+}
+
+
+#decksDropdown ul{
+    display: none;
+    background-color: #2980B9;
+    top: 55px;
+    height:100%, auto;
+    width: 100%, auto;
+    left:0;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    position: absolute;
+}
+#decksDropdown ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 5px 0 10px 10px ;
+    
+    
+    border-radius: 5px;
+}
+#decksDropdown ul li a{
+    padding: 10px 148px 10px 0px;
+}
+#decksDropdown ul li:hover{
+    background-color: #3498DB;
+}
+#decksDropdown:hover ul{
+    display:block
+}
+
+#categoryDropdown ul {
+    display: none;
+    background-color: #2980B9;
+    top: 55px;
+    height:100%, auto;
+    width: 100%, auto;
+    left:-10px;
+    padding: 0 0px 10px 0;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    position: absolute;
+
+}
+#categoryDropdown ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 0 10px 10px ;
+    
+    border-radius: 5px;
+}
+#categoryDropdown ul li a{
+    padding: 10px 148px 10px 0px;
+}
+#categoryDropdown ul li:hover{
+    background-color: #3498DB;
+}
+#categoryDropdown:hover ul{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NavItems{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 2em;
+    grid-column-gap: 4em;
     grid-auto-rows: minmax(50px, auto);
     align-items: center;
     text-align: center;
 
 }
 
- .Nlnavitem a{
+ .NavItems a{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: #fefefe;
@@ -28,13 +225,14 @@
     position: relative;
 
 }
- .Nlnavitem > li {
+ .NavItems > li {
     list-style: none;
     display: inline-block;
     
     position: relative;
 }
- ul > li > a::before{
+
+.NavItems li > a::before{
     content: "";
     align-content: center;
     background-color: #fefefe;
@@ -44,7 +242,7 @@
     height: 10px;
     position: absolute;
 }
-ul >  li > a:hover::before{
+.NavItems  li > a:hover::before{
     transition-duration: 200ms;
     width: 100%;
     top: 49px;
