@@ -1,0 +1,11 @@
+.ImpressumWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Impressum{
+    margin-left: 20px;
+
+}
+.Impressum p {
+    margin-right: 40%;
+}

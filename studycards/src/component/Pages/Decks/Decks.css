@@ -1,16 +1,22 @@
-.CreateDeckWrapper{
+.ChangeDecksWrapper{
+    margin-bottom: 160px;
+}
+.CreateDeckTitle{
+    text-align: center;
+    margin: 0 25%;
+}
+
+.CreateDeckInput{
     display: grid;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+
+    margin-top: 50px;
     
 }
-.CreateDeckTitle{
+
+.DeckWrapper {
     grid-column: 2;
-}
-.CreateDeckInput {
-    grid-column: 2;
-    grid-row: 2;
    
 }
 .DecksContent p, .CardsContent p, .ShowCards p{
@@ -23,7 +29,7 @@
 .DecksContent input, .CardsContent textarea{
     border-style: none;
     border-radius: 5px;
-    border: 1px blue solid;
+    border: 1px #2980B9 solid;
     padding: 10px 10px 10px 10px;
     width: 100%;
 }
@@ -39,18 +45,122 @@
 }
 
 .CardsShown{
+    display: inline-grid;
     
     text-align: left;
-    border: 1px blue solid;
     border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 
-    
+    background-color: #2980B9;
+    color: #fefefe;
+    box-shadow: 10px 10px 10px grey;
 
+    width: 15%;
     
 }
-.CardsWrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+.CardsShown h4{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+#cardsAnswer{
+    margin-bottom: 10px;
+}
+#deleteBtn{
+    margin: 0;
+    
+    text-align: right;
+    padding-right: 5px;
+    color:#fefefe;
+
+    background-color: #E74C3C;
+    border-radius: 10px 10px 0 0;  
+    cursor: pointer; 
+
+}
+
+.ShownDecksWrapper{
+    margin-bottom: 100px;
+}
+.ShownDecks{
+    display: inline-grid;
+    grid-gap: 0.5em;
+    text-align: left;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: left;
+    width: 10%;
+    padding-bottom: 20px;
+
+    background-color: #2980B9;
+    color: #fefefe;
+    box-shadow: 10px 10px 10px grey;
+    
+}
+
+.ShownDecks h4{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+
+
+#decksHr{
+    margin: 10px 0;
+    
+    width: 100%;
+}
+#cardsBtn, #decksBtn{
+    border-style: none;
+    outline-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fefefe;
+    background-color: #2980B9;
+}
+#cardsBtn:hover, #decksBtn:hover{
+    background-color: #3498DB;
+    padding: 13px;
+    transition-duration: 250ms; 
+}
+#cardsBtn:active, #decksBtn:active{
+    color: #3498DB;
+}
+#cardsBtn{
+    margin-right: 30px;
+}
+#deleteBtn:hover{
+    background-color: #C0392B;
+    transition-duration: 250ms;
+
+}
+
+
+#viewBtn, #changeBtn{
+    padding: 7px 15px 7px 15px;
+    margin-top: 10px;
+    border-style: none;
+    outline-style: none;
+    border-radius: 5px;
+
+    background-color: #fefefe; 
+    color: #2980B9;
+    font-weight: bold;
+
+
+}
+#viewBtn{
+    margin-left: 10%;
+    margin-right: 10px;
+}
+
+#viewBtn:hover, #changeBtn:hover{
+    background-color: #3498DB;
+    color: #fefefe;
+    transition-duration: 250ms;
 }
 

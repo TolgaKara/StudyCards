@@ -11,11 +11,13 @@ class Sign extends React.Component{
             email:"",
             password:"",
             name:"",
-            vorname:""
+            firstname:"",
 
         }
         this.onChange = this.onChange.bind(this)
         this.createUser = this.createUser.bind(this)
+        // this.newUser = this.newUser.bind(this)
+        
 
     }
 
@@ -30,12 +32,18 @@ class Sign extends React.Component{
     
 
     createUser(){
-        // fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(() => {
-        //     fire.database().ref("newUser").on(this.state.name, this.state.vorname)
-        // })
-    }
-
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
+            fire.firestore().collection("user").doc("userDetails").collection("singleUserDetails").add({
+                email: this.state.email,
+                name: this.state.name,
+                firstname: this.state.firstname
+            })
+        )
     
+    }
+    
+
+
     render(){
         return(
             <div className="Login">
@@ -52,8 +60,8 @@ class Sign extends React.Component{
                         onChange={(event) => this.onChange(event, "password")}></input><br/>
                         <input placeholder="Name" id="Kid" value={this.state.name}
                         onChange={(event) => this.onChange(event, "name")}></input><br/>
-                        <input placeholder="Vorname" id="Kid" value={this.state.vorname}
-                        onChange={(event) => this.onChange(event, "vorname")}></input><br/>
+                        <input placeholder="Firstname" id="Kid" value={this.state.vorname}
+                        onChange={(event) => this.onChange(event, "firstname")}></input><br/>
                         <button onClick={this.createUser}>Sign Up</button>
                         
                         

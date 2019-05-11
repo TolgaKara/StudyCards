@@ -30,10 +30,10 @@ class LoggedFooter extends React.Component{
                 takimata sanctus est Lorem ipsum dolo.
                 </p>
             <div className="Ficons">
-                <pre><i class="fas fa-landmark">    StudyCard</i></pre>
-                <pre><i class="fas fa-map-marker-alt">     Fugger Strasse 99, 71111 Waldenbuch</i></pre>
-                <pre><i class="fas fa-mobile-alt">      07157 79 26 56</i></pre>
-                <pre><i class="fas fa-envelope">    home@study-card.com</i></pre>
+                <pre><i className="fas fa-landmark">    StudyCard</i></pre>
+                <pre><i className="fas fa-map-marker-alt">     Fugger Strasse 99, 71111 Waldenbuch</i></pre>
+                <pre><i className="fas fa-mobile-alt">      07157 79 26 56</i></pre>
+                <pre><i className="fas fa-envelope">    home@study-card.com</i></pre>
 
             </div>
 
@@ -42,11 +42,11 @@ class LoggedFooter extends React.Component{
                 <h2>Social Media</h2>
                 <hr className="hr1"/>
                 <div className="Fbrands">
-                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.reddit.com"><i class="fab fa-reddit-alien"></i></a>
-                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i className="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com"><i className="fab fa-reddit-alien"></i></a>
+                <a href="https://www.twitter.com"><i className="fab fa-twitter"></i></a>
                 </div>
 
             </div>

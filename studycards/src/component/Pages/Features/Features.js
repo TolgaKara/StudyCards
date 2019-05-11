@@ -8,13 +8,8 @@ import CodingOff from "./img/coding-img-off.png"
 import CommunityOff from "./img/community-img-off.png"
 import ProgressOff from "./img/progress-img-off.png"
 import ResponsiveOff from "./img/responsive-img-off.png"
-import EducationOff from "./img/education-img-off.png"
-import CloudOn from "./img/cloud-img-on.png"
-import CodingOn from "./img/coding-img-on.png"
-import CommunityOn from "./img/community-img-on.png"
-import ProgressOn from "./img/progress-img-on.png"
-import ResponsiveOn from "./img/responsive-img-on.png"
 import EducationOn from "./img/education-img-on.png"
+
 
 
 
@@ -26,7 +21,7 @@ class Features extends React.Component{
 
     render(){
         return(
-            <div className="featuresWrapper">
+            <div className="featuresWrapper" id="features">
                 <div>
                     <h1>FEATURES</h1>
                     <p>Minim tempor sit sit ipsum do proident sint ea deserunt do voluptate id commodo consequat.<br/>
@@ -42,19 +37,19 @@ class Features extends React.Component{
                         <img src={EducationOn} id="educationOff"/>
                     </div>
                     <div id="cloudImg">
-                       <Link to="/features/cloud"> <img src={CloudOff}/> </Link>
+                       <Link to="/home/cloud"> <img src={CloudOff}/> </Link>
                     </div>
                     <div id="communityImg">
-                        <Link to="/features/community"><img src={CommunityOff}/></Link>
+                        <Link to="/home/community"><img src={CommunityOff}/></Link>
                     </div>
                     <div id="responsiveImg">
-                        <Link to="/features/responsive"><img src={ResponsiveOff}/></Link>
+                        <Link to="/home/responsive"><img src={ResponsiveOff}/></Link>
                     </div>
                     <div id="progressImg">
-                        <Link to="/features/progress"><img src={ProgressOff}/></Link>
+                        <Link to="/home/progress"><img src={ProgressOff}/></Link>
                     </div>
                     <div id="codingImg">
-                        <Link to="/features/code"><img src={CodingOff}/></Link>
+                        <Link to="/home/code"><img src={CodingOff}/></Link>
                     </div>
                 </div>
                 <div className="featuresContent">

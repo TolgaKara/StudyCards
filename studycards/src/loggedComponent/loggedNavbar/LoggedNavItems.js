@@ -4,27 +4,69 @@ import fire from "../../component/Pages/config/Firebase"
 
 
 
-class LoggedNavItems extends React.Component{
 
+class LoggedNavItems extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            name: "",
+            firstname: ""
+        }
+        // this.getUserFullName = this.getUserFullName.bind(this)
+    }
+    
     logoutUser(){
         fire.auth().signOut()
     }
-    getUserEmail(){
-        fire.auth()
-    }
+
+    //  getUserFullName(){
+    //     fire.firestore().collection('user').where(fire.auth().currentUser.email, "==", "fire.firestore().collection(user).get(email)").get().then(snapshot =>{
+    //         snapshot.docs.forEach(doc =>{
+    //             this.setState({
+    //             firstname: doc.data().firstname,
+    //             name: doc.data().name
+    //             })
+                
+    //         })
+    //     })
+         
+    
+    // }
+
+    // // getUserEmail(){
+    // //     fire.database().ref("user").once
+    // // }
+
+    // componentDidMount(){
+    //     this.getUserFullName()
+    // }
+
 
     render(){
+        
+        console.log(fire.name)
+        console.log(fire.auth().currentUser.email)
+        console.log(fire.auth().currentUser.uid)
+        console.log(fire.auth().currentUser.displayName)
+        console.log(fire.database().ref("user"))
+        
+        console.log("___________________")
+       
+        
+
+
+           
         
 
         return(
             <div className="gridWrapper">
                 <div>
                     <ul className="CategoryItem">
-                        <li id="categoryDropdown"><Link to="/user/">Category</Link>
+                        <li id="categoryDropdown"><Link to="/category/">Category</Link>
                             <ul>
-                                <li><Link>Programming</Link></li>                        
-                                <li><Link>Geography</Link></li>
-                                <li><Link>Languages</Link></li>
+                                <li><Link to="/category/programming">Programming</Link></li>                        
+                                <li><Link to="/category/geography">Geography</Link></li>
+                                <li><Link to="/category/languages">Languages</Link></li>
 
                             </ul>
                         </li>
@@ -36,14 +78,14 @@ class LoggedNavItems extends React.Component{
                     <li id="decksDropdown"><Link to="/user/decks">Decks</Link>
                     
                         <ul>
-                            <li><Link>Your Decks</Link></li>
+                            <li><Link to="/user/your-decks">Your Decks</Link></li>
                             <li><Link to="/user/create-decks">Create Decks</Link></li>
+                            <li><Link to="/change-deck">Change Decks</Link></li>
                         </ul>
                     </li>
-                    <li id="userDropdown"><Link to="/user/">User.Name</Link>
+                    <li id="userDropdown"><Link to="/user/" id="userName">{fire.auth().currentUser.email}</Link>
                         <ul>
-                            <li><Link >Profile</Link></li>
-                            <li><Link onClick={this.logoutUser} >Logout</Link></li>
+                            <li><Link to="/home/" onClick={this.logoutUser} >Logout</Link></li>
                         </ul>
                     </li>
                 </ul>

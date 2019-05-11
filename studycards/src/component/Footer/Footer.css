@@ -16,10 +16,11 @@ grid-auto-rows: minmax(200px ,auto);
 text-align: center;
 
 position: relative;
+top: 0px;
 width: 100%;
 background-color: #2980B9;
 color: #fefefe;
-bottom: 0;
+
 
 
 

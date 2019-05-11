@@ -5,17 +5,19 @@ import penImage from "./Img/Gruppe17.png"
 import lampImage from "./Img/Gruppe26.png"
 
 
+
 class About extends React.Component{
 render(){
     return(
+        <div>
             <div>
-                <div className="header">
-                    <div className="title"><h1>About <br/> Us</h1></div>
+                <div className="header" id="about">
+                    <div className="title" ><h1>About <br/> Us</h1></div>
                     <p className="titleContent">Minim sit in sit in cillum est tempor. Ad voluptate consequat duis elit ad eiusmod cupidatat non irure sunt. 
                         Mollit tempor culpa sit cupidatat. Dolor cillum do mollit irure eiusmod aliqua. Velit fugiat ut ipsum ex eiusmod amet proident esse. 
                         Elit voluptate irure id quis ad fugiat magna aliquip eiusmod Lorem. Qui ullamco id sunt cupidatat quis ad amet aliqua quis velit irure eiusmod.</p>
                 </div>
-                <div className="contentWrapper">
+                <div className="contentWrapper" >
                 <div className="content">
                     <img className="images" src={rocketImage} />
                     <h3 id="imgTitle">BE FAST</h3>
@@ -82,6 +84,7 @@ render(){
                 </div>
                 </div>
             </div>
+        </div>
             
     )
 }

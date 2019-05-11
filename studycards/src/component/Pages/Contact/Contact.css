@@ -42,27 +42,30 @@
 }
 #subjectBox{
     padding-left: 10px;
-    padding-right: 34%;
+    padding-right: 200px;
 
 }
 
 div .sendButton {
     text-align: right;
-    margin-right: 20%;
+    margin-right: 17%;
+    
 }
 #sendBtn{
-    font-size: 18px;
+    font-size: 16px;
     border-style: none;
     border-radius: 10px;
-    border: 1.5px #2ECC71 solid;
+    border: 1.5px  solid;
     
-    padding: 15px 70px;
+    
+    padding: 10px 50px;
     margin-bottom: 100px;
-    background-color: #fefefe;
-    color: #2ECC71;
+    background-color: #2ECC71;
+    color: #fefefe;
 
     font-weight: bold;
     outline-style: none;
+    cursor: pointer;
 }
 #messageBox{
     font-size: 16px;
@@ -71,7 +74,9 @@ div .sendButton {
 }
 
 #sendBtn:hover{
-    padding: 20px 73px;
+    background-color: #27AE60;
+    box-shadow: 5px 5px 5px grey;
 
-    transition-duration: 300ms;
+    transition-duration: 250ms;
 }
+

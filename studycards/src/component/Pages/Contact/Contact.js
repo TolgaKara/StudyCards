@@ -1,7 +1,13 @@
 import React from "react"
 import "./Contact.css"
 
+
 class Contact extends React.Component{
+    constructor(){
+        super()
+    }
+
+
     render(){
         return(
       
@@ -15,22 +21,23 @@ class Contact extends React.Component{
                     Etiam ut semper urna, nec aliquam mi. Sed ullamcorper.
                     </p>
                 </div>
+                <form action="contactform.php" method="post"></form>
                 <div className="contactInput">
                     <div>
-                        <input placeholder="Subject" id="subjectBox"></input><br/>
+                        <input placeholder="Subject" className="subject" id="subjectBox"></input><br/>
                     </div>
                     <div>
-                        <input placeholder="Name" id="personalBox"></input>
-                        <input placeholder="Firstname" id="personalBox"></input><br/>
-                        <input placeholder="E-Mail" type="email" id="personalBox"></input>
-                        <input placeholder="Phone Number" id="personalBox"></input><br/>
+                        <input placeholder="Name" className="name" id="personalBox"></input>
+                        <input placeholder="Firstname" className="firstname" id="personalBox"></input><br/>
+                        <input placeholder="E-Mail" className="email" type="email" id="personalBox"></input>
+                        <input placeholder="Phone Number" className="phoneNumber" id="personalBox"></input><br/>
                     </div>
                     <div>
-                        <textarea placeholder="Message" id="messageBox"></textarea>
+                        <textarea placeholder="Message" className="message" id="messageBox" cols="37" rows="10"></textarea>
                     </div>
                 </div>
                 <div className="sendButton">
-                <button id="sendBtn" formAction="mailto:s0560885@htw-berlin.de">SEND</button>
+                <button className="sendBtn" id="sendBtn">SEND</button>
                 
                 </div>
             

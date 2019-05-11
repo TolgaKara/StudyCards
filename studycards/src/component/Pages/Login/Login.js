@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import "./Login.css"
 import fire from '../config/Firebase'
-import App from "../../../App"
-import About from "../About/About"
-import Test from "../test"
+
 
 
 
@@ -43,13 +41,8 @@ class Login extends React.Component{
     
 
     render(){
-        
-        
         return(
             <div className="Login">
-            <div>
-        {(this.state.user) ? <h1>Logged in {this.state.user.uid}</h1> : <h1>Logged out!</h1>}
-            </div>
                 <div className="Lback">
                     <div className="Lbtn">
                         <button className="active" id="Lobtn">Login</button>

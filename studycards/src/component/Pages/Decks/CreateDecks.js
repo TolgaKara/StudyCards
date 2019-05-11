@@ -1,23 +1,38 @@
 import React from "react"
 import fire from "../config/Firebase"
+import YourDecks from "./YourDecks"
+import { stringify } from "querystring";
+
+
 
 
 
 
 
 class CreateDecks extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             deckname: "",
+            decknamelength: 30,
             description: "",
-            question:"",
-            answer:"",
-            cards:[]
+            category: "",
+            question: "",
+            answer: "",
+            cards:[],
+            decks:[],
+
+
+
         }
         this.createCard = this.createCard.bind(this)
         this.onChange = this.onChange.bind(this)
+        this.deleteCard = this.deleteCard.bind(this)
+        this.createDeck = this.createDeck.bind(this)
+       
+        
     }
+    
 
 
     
@@ -26,20 +41,16 @@ class CreateDecks extends React.Component{
             [key]: event.target.value
         })
     }
+    
 
-    createCard(){
-        
-        fire.database().ref("cards").push({
-            question: this.state.question,
-            answer: this.state.answer
-        })
-    }
-
-    componentDidMount(){
+    componentWillMount(){
         this.changeHandler()
     }
+    
+
     changeHandler(){
-        fire.database().ref("cards").on("child_added", snapshot =>{
+        fire.database().ref("decks/" + this.state.category + "/" + fire.auth().currentUser.uid + "/" + fire.auth().currentUser.uid + "_" + this.state.deckname + "/cards/")
+        .on("child_added", snapshot =>{
             let card = {
                 id: snapshot.key,
                 question: snapshot.val().question,
@@ -52,12 +63,57 @@ class CreateDecks extends React.Component{
                 cards: cards
             })
 
+
+        })
+        fire.database().ref("decks/" + this.state.category + "/" + fire.auth().currentUser.uid + "/" + fire.auth().currentUser.uid + "_" + this.state.deckname + "/cards/")
+        .on("child_removed", snapshot =>{
+            let cards = this.state.cards
+            cards = cards.filter(cards => cards.id !== snapshot.key)
+            this.setState({
+                cards: cards
+            })
+        })
+    }
+    
+    
+
+    deleteCard(id){
+        fire.database().refFromURL("https://studycards-2758b.firebaseio.com/decks/grPIKjauovTeReNKX3X0WttyqEy2/grPIKjauovTeReNKX3X0WttyqEy2_/cards").child(id).remove()
+    }
+
+    createCard(){ 
+            fire.database().ref("decks/" + this.state.category + "/" + fire.auth().currentUser.uid + "/" +"cards")
+            .push({
+            question: this.state.question,
+            answer: this.state.answer
         })
     }
 
+    
+
+
+    createDeck(){
+       if (this.state.deckname !== "" && this.state.category != ""){
+           if(this.state.deckname.length <= this.state.decknamelength){
+            fire.database().ref("decks/" + this.state.category + "/" + fire.auth().currentUser.uid ).push({
+                deckname: this.state.deckname,
+                category: this.state.category,
+                description: this.state.description
+           }).then(this.setState({
+               deckname: "",
+               category: "",
+               description: ""
+           }))
+            
+            }else{alert("You exceeded the Limit of " + this.state.decknamelength + " Character")}
+       } else{
+           alert("Deckname and Category are empty!!!")
+       }
+    }
 
 
     render(){
+        console.log(this.state.checkDeckname)
         return(
         <div>
             <div className="CreateDeckWrapper">
@@ -70,39 +126,48 @@ class CreateDecks extends React.Component{
                 </div>
 
                 <div className="CreateDeckInput">
-                <div className="DecksContent">
-                    <p>Deck</p>
-                    <input type="text" placeholder="Deck Name" ></input><br/>
-                    <input type="text" placeholder="Description" id="deckDesc"></input><br/>
-                </div>
-
-                <div className="CardsContent">
-                    <p>Card</p>
-                    <textarea type="text" placeholder="Question" id="cardQ" value={this.state.question}
-                    onChange={(event) => this.onChange(event, "question")}></textarea><br/>
-                    <textarea type="text" placeholder="Answer" id="cardA" value={this.state.answer}
-                    onChange={(event) => this.onChange(event, "answer")}></textarea><br/>
-                    <button onClick={this.createCard} id="cardsBtn">Save your Card</button>
-                </div>
-                <div className="CardsWrapper">
-                <div className="ShowCards">
-                    <p>Cards Shown Here</p>
-                    <div>
-                    {this.state.cards.map(cards => (
-                        <div className="CardsShown"key={cards.id}>
-                        <h4>{cards.question}</h4>
-                        <h4>{cards.answer}</h4>
-
-                        </div>
-                    ))}
+                <div className="DeckWrapper">
+                    <div className="DecksContent">
+                        <p>Deck</p>
+                        <input type="text" placeholder="Deck Name" id="deckname" value={this.state.deckname}
+                        onChange={(event) => this.onChange(event, "deckname")}></input><br/>
+                        <input type="text" placeholder="Description" id="deckDesc" value={this.state.description}
+                        onChange={(event) => this.onChange(event, "description")}></input><br/>
+                        <input type="text" placeholder="Category" id="deckCat" value={this.state.category}
+                        onChange={(event) => this.onChange(event, "category")}></input>
                     </div>
 
-                </div>
-                </div>
-                <div>
-                <button>Save your Deck</button>
-                <button>Exit</button>
-                </div>
+                    <div className="CardsContent">
+                        <p>Card</p>
+                        <textarea type="text" placeholder="Question" id="cardQ" value={this.state.question}
+                        onChange={(event) => this.onChange(event, "question")}></textarea><br/>
+                        <textarea type="text" placeholder="Answer" id="cardA" value={this.state.answer}
+                        onChange={(event) => this.onChange(event, "answer")}></textarea><br/>
+                        <button onClick={this.createCard} id="cardsBtn">Save your Card</button>
+                        <button onClick={this.createDeck} id="decksBtn" type="reset">Save your Deck</button>
+                    </div>
+                    </div>
+                    </div>
+                
+                    <div className="CardsWrapper">
+                        <p>Cards Shown Here</p>
+                        <div className="ShowCards">
+                        {this.state.cards.map(cards => (
+                            <div className="CardsShown"><p id="deleteBtn" onClick= {() => this.deleteCard(cards.id)}>x</p>
+                            <h4>{cards.id}</h4>
+                            <h4>Question: </h4>
+                            <h4>{cards.question}</h4>
+                            <h4>Answer: </h4>
+                            <h4>{cards.answer}</h4>
+                            
+                    
+                            </div>
+                        ))}
+                        </div>
+
+                    </div>
+                    <div>
+                    <YourDecks />
                 </div>
             </div>
 
