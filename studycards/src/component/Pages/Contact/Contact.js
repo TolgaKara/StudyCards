@@ -3,10 +3,6 @@ import "./Contact.css"
 
 
 class Contact extends React.Component{
-    constructor(){
-        super()
-    }
-
 
     render(){
         return(
@@ -33,7 +29,7 @@ class Contact extends React.Component{
                         <input placeholder="Phone Number" className="phoneNumber" id="personalBox"></input><br/>
                     </div>
                     <div>
-                        <textarea placeholder="Message" className="message" id="messageBox" cols="37" rows="10"></textarea>
+                        <textarea placeholder="Message" className="message" id="messageBox" cols="38" rows="10"></textarea>
                     </div>
                 </div>
                 <div className="sendButton">

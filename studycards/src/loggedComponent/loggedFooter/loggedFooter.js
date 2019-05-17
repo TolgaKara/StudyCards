@@ -12,7 +12,7 @@ class LoggedFooter extends React.Component{
                 <hr className="hr1"/>
                 
                 
-                <Link to ="/decks"><p>Decks</p></Link>    
+                <Link to ="/user/your-decks"><p>Decks</p></Link>    
                 <Link to ="/contact"><p>Contact Us</p></Link>
                 <hr/>
                 <Link to ="/impressum"><p>Impressum</p></Link>
@@ -42,11 +42,11 @@ class LoggedFooter extends React.Component{
                 <h2>Social Media</h2>
                 <hr className="hr1"/>
                 <div className="Fbrands">
-                <a href="https://www.youtube.com"><i className="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com"><i className="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
-                <a href="https://www.reddit.com"><i className="fab fa-reddit-alien"></i></a>
-                <a href="https://www.twitter.com"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-reddit-alien"></i></a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
                 </div>
 
             </div>

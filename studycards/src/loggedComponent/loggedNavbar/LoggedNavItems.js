@@ -62,20 +62,16 @@ class LoggedNavItems extends React.Component{
             <div className="gridWrapper">
                 <div>
                     <ul className="CategoryItem">
-                        <li id="categoryDropdown"><Link to="/category/">Category</Link>
-                            <ul>
-                                <li><Link to="/category/programming">Programming</Link></li>                        
-                                <li><Link to="/category/geography">Geography</Link></li>
-                                <li><Link to="/category/languages">Languages</Link></li>
-
-                            </ul>
+                        <li id="categoryDropdown">
+                        <Link to="/category/">Category</Link>
+        
                         </li>
                     </ul>
                         <input type="text" placeholder="Search" id="searchfield"></input><button id="searchbtn">Search</button>
                 </div>
             <div className="NavitemWrapper">
                 <ul className="LoggedNavItems" id="loggedNavItems">
-                    <li id="decksDropdown"><Link to="/user/decks">Decks</Link>
+                    <li id="decksDropdown"><Link to = "#" id="decks">Decks</Link><i id="dropIcon"className="fas fa-angle-down"/>
                     
                         <ul>
                             <li><Link to="/user/your-decks">Your Decks</Link></li>
@@ -83,7 +79,7 @@ class LoggedNavItems extends React.Component{
                             <li><Link to="/change-deck">Change Decks</Link></li>
                         </ul>
                     </li>
-                    <li id="userDropdown"><Link to="/user/" id="userName">{fire.auth().currentUser.email}</Link>
+                    <li id="userDropdown"><Link to="#" id="userName">{fire.auth().currentUser.email}</Link><i id="dropIcon" className="fas fa-angle-down"/>
                         <ul>
                             <li><Link to="/home/" onClick={this.logoutUser} >Logout</Link></li>
                         </ul>

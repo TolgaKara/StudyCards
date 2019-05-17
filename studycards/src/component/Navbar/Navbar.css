@@ -65,6 +65,15 @@
     transition-duration: 250ms;
 }
 
+#dropIcon{
+    color: #fefefe;
+}
+#userName{
+    padding-right: 15px;
+}
+#decks{
+    padding-right: 10px;
+}
 
 #userDropdown{
    left: 120%;
@@ -196,6 +205,7 @@
     grid-auto-rows: minmax(50px, auto);
     align-items: center;
     text-align: center;
+    
 
 }
 
@@ -218,6 +228,7 @@
  .NavItems > li {
     list-style: none;
     display: inline-block;
+    left: 200%;
     
     position: relative;
 }

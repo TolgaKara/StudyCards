@@ -99,7 +99,7 @@ class ChangeDeck extends React.Component{
             <div className="CreateDeckInput">
                 <div className="DeckWrapper">
                     <div className="DecksContent">
-                        <p>Deck</p>
+                        <h1>Change your Decks</h1>
                         <input type="text" placeholder="Deck Name" value={this.state.deckname}
                         onChange={(event) => this.onChange(event, "deckname")}></input><br/>
                         <input type="text" placeholder="Description" id="deckDesc" value={this.state.description}
@@ -116,11 +116,14 @@ class ChangeDeck extends React.Component{
                     {this.state.decksProgramming.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckProgramming(decks.id)}>x</p>
                             
-                            <h4>Name: <br/> {decks.deckname} </h4>
-                            <h4>Description: <br/> {decks.description}</h4>                     
-                            <h4>Category: <br/>{decks.category}</h4>
+                            <h4>Deckname:</h4>
+                            <p id="deckname"> {decks.deckname}</p>
+                            <h4>Description: <br/></h4>
+                            <p id="description">{decks.description}</p>                     
+                            <h4>Category: <br/></h4>
+                            <p id="category">{decks.category}</p>
                             <div className="DecksBtn">
-                            <button id="changeBtn" onClick = {() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>
+                            <button id="selectBtn" onClick = {() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>
                             </div>
                         </div>
                     ))}
@@ -131,11 +134,14 @@ class ChangeDeck extends React.Component{
                     {this.state.decksGeography.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckGeography(decks.id)}>x</p>
 
-                            <h4>Name: <br/> {decks.deckname} </h4>
-                            <h4>Description: <br/> {decks.description}</h4>                            
-                            <h4>Category: <br/>{decks.category}</h4>
+                            <h4>Deckname:</h4>
+                            <p id="deckname">{decks.deckname}</p>
+                            <h4>Description: <br/></h4>
+                            <p id="description">{decks.description}</p>                            
+                            <h4>Category: <br/></h4>
+                            <p id="category">{decks.category}</p>
                             <div className="DecksBtn">
-                            <button id ="changeBtn" onClick={() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>                  
+                            <button id ="selectBtn" onClick={() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>                  
                             </div>
                         </div>
                     ))}
@@ -145,11 +151,14 @@ class ChangeDeck extends React.Component{
                     {this.state.decksLanguages.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckLanguages(decks.id)}>x</p>
                             
-                            <h4>Name: <br/> {decks.deckname} </h4>
-                            <h4>Description: <br/> {decks.description}</h4>                           
-                            <h4>Category: <br/>{decks.category}</h4>
+                            <h4>Deckname:</h4>
+                            <p id="deckname"> {decks.deckname}</p>
+                            <h4>Description: <br/></h4>
+                            <p id="description">{decks.description}</p>                           
+                            <h4>Category: <br/></h4>
+                            <p id="category">{decks.category}</p>
                             <div className="DecksBtn">
-                            <button id="changeBtn" onClick={() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>
+                            <button id="selectBtn" onClick={() => this.stateChange(decks.deckname, decks.description, decks.category, decks.id)}> Select! </button>
                             </div>
                         </div>
                     ))}

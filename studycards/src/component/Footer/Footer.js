@@ -9,9 +9,9 @@ function Footer(){
             <div className ="Flinks">
                 <h2>Links</h2>
                 <hr className="hr1"/>
-                <Link to ="/about"><p>About us</p></Link>
-                <Link to ="/features"><p>Features</p></Link>
-                <Link to ="/decks"><p>Decks</p></Link>    
+                <a href="/home#about"><p>About us</p></a>
+                <a href="/home#features"><p>Features</p></a>
+                
                 <Link to ="/contact"><p>Contact Us</p></Link>
                 <hr/>
                 <Link to ="/impressum"><p>Impressum</p></Link>
@@ -41,11 +41,11 @@ function Footer(){
                 <h2>Social Media</h2>
                 <hr className="hr1"/>
                 <div className="Fbrands">
-                <a href="https://www.youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i className="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
-                <a href="https://www.reddit.com" target="_blank"><i className="fab fa-reddit-alien"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-reddit-alien"></i></a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
                 </div>
 
             </div>

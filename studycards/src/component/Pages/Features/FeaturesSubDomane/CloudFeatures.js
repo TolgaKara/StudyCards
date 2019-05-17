@@ -24,26 +24,26 @@ class CloudFeatures extends React.Component{
                     </p>
                 </div>
                 <div>
-                    <img className="featuresMainImg" src={imgFeature}/>
+                    <img className="featuresMainImg" src={imgFeature} alt="Companylogo with Directions"/>
                 </div>
                 <div className="imgWrapper">
                     <div id="educationImg">
-                        <Link to="/home/"><img src={EducationOff} id="educationOff"/></Link>
+                        <Link to="/home/"><img src={EducationOff} id="educationOff" alt="University Hat"/></Link>
                     </div>
                     <div id="cloudImg">
-                       <Link to="/home/cloud"> <img src={CloudOn}/></Link>
+                       <Link to="/home/cloud"> <img src={CloudOn} alt="Cloud"/></Link>
                     </div>
                     <div id="communityImg">
-                        <Link to="/home/community"><img src={CommunityOff}/></Link>
+                        <Link to="/home/community"><img src={CommunityOff} alt="One Person stands behind the other, represents Community"/></Link>
                     </div>
                     <div id="responsiveImg">
-                        <Link to="/home/responsive"><img src={ResponsiveOff}/></Link>
+                        <Link to="/home/responsive"><img src={ResponsiveOff} alt="Monitor, Phone, Smartwatch, represents Repsonsiv"/></Link>
                     </div>
                     <div id="progressImg">
-                        <Link to="/home/progress"><img src={ProgressOff}/></Link>
+                        <Link to="/home/progress"><img src={ProgressOff} alt="Progress"/></Link>
                     </div>
                     <div id="codingImg">
-                        <Link to="/home/code"><img src={CodingOff}/></Link>
+                        <Link to="/home/code"><img src={CodingOff} alt="Coding Symbol"/></Link>
                     </div>
                 </div>
                 <div className="featuresContent">

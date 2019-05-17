@@ -79,14 +79,19 @@ changeHandler(){
     render(){
         return(
             <div>
-                <h1>Category</h1>
+                <div className="categoryTitle">
+                <h1>Category</h1> 
+                <button id="editBtn">Edit</button>
+                </div>
                 <div>
                     <h2>Programming - {this.state.decksProgramming.length}</h2>
                     <div className="ShownDecksWrapper">
                     {this.state.decksProgramming.map(decks => (
                     <div className="ShownDecks">
-                        <h4>Name: <br/> {decks.deckname}</h4>
-                        <p>Description: <br/> {decks.description}</p>
+                        <h4 id="catName">Name: <br/> {decks.deckname}</h4>
+                        <hr/>
+                        <h4>Description: <br/> {decks.description}</h4>
+                        <i id="decksDropIcon" className="fas fa-angle-down"/>
                     </div>
                     ))}
                     </div>
@@ -98,8 +103,10 @@ changeHandler(){
                     {this.state.decksGeography.map(decks => (
                     <div className="ShownDecks">
                         
-                        <h4>Name: <br/> {decks.deckname}</h4>
+                        <h4 id="catName">Name: <br/> {decks.deckname}</h4>
+                        <hr/>
                         <h4>Description: <br/> {decks.description}</h4>
+                        <i id="decksDropIcon" className="fas fa-angle-down"/>
         
                     </div>
                         ))}
@@ -110,8 +117,10 @@ changeHandler(){
                     <div className="ShownDecksWrapper">
                         {this.state.decksLanguages.map(decks => (
                             <div className="ShownDecks">
-                                <h4>Name: <br/> {decks.deckname}</h4>
+                                <h4 id="catName">Name: <br/> {decks.deckname}</h4>
+                                <hr/>
                                 <h4>Description: <br/> {decks.description}</h4>
+                                <i id="decksDropIcon" className="fas fa-angle-down"/>
                             </div>
                         ))}
                     </div>

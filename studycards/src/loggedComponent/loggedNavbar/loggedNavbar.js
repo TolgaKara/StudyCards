@@ -1,6 +1,5 @@
 import React from "react"
 import LoggedNavItems from "./LoggedNavItems"
-import { Link } from "react-router-dom"
 import Slogo from "../../component/img/Gruppe24.png"
 
 

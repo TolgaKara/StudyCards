@@ -19,7 +19,7 @@ render(){
                 </div>
                 <div className="contentWrapper" >
                 <div className="content">
-                    <img className="images" src={rocketImage} />
+                    <img className="images" src={rocketImage} alt="A Rocket, which stands for Speed"/>
                     <h3 id="imgTitle">BE FAST</h3>
                     <p id="imgContent">
                         Non officia ex aute amet labore Lorem ut. 
@@ -40,7 +40,7 @@ render(){
                     </p>
                 </div>
                 <div className="content">
-                    <img className="images" src={penImage} />
+                    <img className="images" src={penImage} alt="A Pen, which stands for Creativity"/>
                     <h3 id="imgTitle">BE CREATIVE</h3>
                     <p id="imgContent">
                         Non officia ex aute amet labore Lorem ut. 
@@ -61,7 +61,7 @@ render(){
                     </p>
                 </div>
                 <div className="content">
-                    <img className="images" src={lampImage} />
+                    <img className="images" src={lampImage} alt="A Lamp, which stands for Innovation"/>
                     <h3 id="imgTitle">BE INNOVATIVE</h3>
                     <p id="imgContent"> 
                         Non officia ex aute amet labore Lorem ut. 

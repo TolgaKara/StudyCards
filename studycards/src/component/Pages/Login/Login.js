@@ -32,10 +32,9 @@ class Login extends React.Component{
 
 
     loginUser() {
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() =>
-        this.props.history.push("/user/")
-        
-        )}
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() =>        
+        this.props.history.push("/category/"))
+        }
 
 
     

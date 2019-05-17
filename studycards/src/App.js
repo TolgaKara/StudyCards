@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Redirect} from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import fire from "./component/Pages/config/Firebase"
 
 import About from "./component/Pages/About/About"
@@ -24,12 +24,9 @@ import LoggedFooter from "./LoggedComponent/LoggedFooter/LoggedFooter"
 import CreateDecks from "./component/Pages/Decks/CreateDecks"
 import YourDecks from "./component/Pages/Decks/YourDecks"
 import Impressum from "./component/Pages/Impressum/Impressum"
-import Category from "./LoggedComponent/Category/Category"
 import ChangeDeck from "./component/Pages/Decks/ChangeDeck"
-import Programming from "./LoggedComponent/Category/subCategory/Programming" 
-import Geography from "./LoggedComponent/Category/subCategory/Geography" 
-import Languages from "./LoggedComponent/Category/subCategory/Languages" 
-import Null from "./LoggedComponent/Category/subCategory/Null"   
+import Category from "./LoggedComponent/Category/Category"
+
 
 
 class App extends React.Component{
@@ -58,14 +55,11 @@ class App extends React.Component{
                 <Router>
                     <LoggedNavbar/>
                     <Route exact path="/category/" component={Category}/> 
-                    <Route exact path="/category/programming" component={Programming}/> 
-                    <Route exact path="/category/geography" component={Geography}/> 
-                    <Route exact path="/category/languages" component={Languages}/>
-                    <Route exact path="/category/null" component={Null}/>   
                     <Route exact path="/user/decks" component={Decks}/> 
                     <Route exact path="/user/create-decks" component={CreateDecks}/>
                     <Route exact path="/user/your-decks" component={YourDecks}/>
                     <Route exact path="/impressum" component={Impressum}/>
+                    <Route exact path="/contact" component={Contact} /> 
                     <Route exact path="/change-deck" component={ChangeDeck}/>
                     <LoggedFooter />
                 </Router>

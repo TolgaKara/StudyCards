@@ -1,7 +1,7 @@
 import React from "react"
 import fire from "../config/Firebase"
 import YourDecks from "./YourDecks"
-import { stringify } from "querystring";
+
 
 
 
@@ -93,7 +93,7 @@ class CreateDecks extends React.Component{
 
 
     createDeck(){
-       if (this.state.deckname !== "" && this.state.category != ""){
+       if (this.state.deckname !== "" && this.state.category !== ""){
            if(this.state.deckname.length <= this.state.decknamelength){
             fire.database().ref("decks/" + this.state.category + "/" + fire.auth().currentUser.uid ).push({
                 deckname: this.state.deckname,
@@ -129,7 +129,7 @@ class CreateDecks extends React.Component{
                 <div className="DeckWrapper">
                     <div className="DecksContent">
                         <p>Deck</p>
-                        <input type="text" placeholder="Deck Name" id="deckname" value={this.state.deckname}
+                        <input type="text" placeholder="Deck Name" id="createDeckName" value={this.state.deckname}
                         onChange={(event) => this.onChange(event, "deckname")}></input><br/>
                         <input type="text" placeholder="Description" id="deckDesc" value={this.state.description}
                         onChange={(event) => this.onChange(event, "description")}></input><br/>

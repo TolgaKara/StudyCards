@@ -1,7 +1,6 @@
 import React from "react"
 import fire from "../config/Firebase"
-import { Link } from "react-router-dom"
-import ChangeDeck from "./ChangeDeck"
+
 
 
 class YourDecks extends React.Component{
@@ -107,8 +106,8 @@ class YourDecks extends React.Component{
          
         return(
             <div>
-                <h1>Your Decks</h1>
-                <p>Programming</p>
+                <h1 id="yourDeckTitle">Your Decks</h1>
+                <h2>Programming</h2>
                 <div className="ShownDecksWrapper">
                     {this.state.decksProgramming.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckProgramming(decks.id)}>x</p>
@@ -121,7 +120,7 @@ class YourDecks extends React.Component{
                         </div>
                     ))}
                 </div>
-                <p>Geography</p>
+                <h2>Geography</h2>
                 <div className="ShownDecksWrapper">
                     {this.state.decksGeography.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckGeography(decks.id)}>x</p>
@@ -135,7 +134,7 @@ class YourDecks extends React.Component{
                         </div>
                     ))}
                 </div>
-                <p>Languages</p>
+                <h2>Languages</h2>
                 <div className="ShownDecksWrapper">
                     {this.state.decksLanguages.map(decks =>(
                         <div className="ShownDecks"><p id="deleteBtn" onClick= {() => this.deleteDeckLanguages(decks.id)}>x</p>

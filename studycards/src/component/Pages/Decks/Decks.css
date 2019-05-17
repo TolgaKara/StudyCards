@@ -1,9 +1,19 @@
+h1{
+    color: #2980B9;
+    text-align: center;
+}
+h2{
+    color: #2980B9;
+}
 .ChangeDecksWrapper{
     margin-bottom: 160px;
 }
 .CreateDeckTitle{
     text-align: center;
     margin: 0 25%;
+}
+.CreateDeckTitle p{
+    font-size: 18px;
 }
 
 .CreateDeckInput{
@@ -32,6 +42,11 @@
     border: 1px #2980B9 solid;
     padding: 10px 10px 10px 10px;
     width: 100%;
+}
+.DecksContent > h1 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #2980B9;
 }
 #deckDesc{
     margin-top: 10px;
@@ -70,9 +85,10 @@
 }
 #deleteBtn{
     margin: 0;
-    
+
     text-align: right;
     padding-right: 5px;
+    
     color:#fefefe;
 
     background-color: #E74C3C;
@@ -88,12 +104,15 @@
     display: inline-grid;
     grid-gap: 0.5em;
     text-align: left;
+
     border-radius: 10px;
     margin-right: 20px;
     margin-bottom: 20px;
     align-items: left;
+
     width: 10%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+
 
     background-color: #2980B9;
     color: #fefefe;
@@ -122,6 +141,9 @@
     color: #fefefe;
     background-color: #2980B9;
 }
+#decksBtn{
+margin-top: 20px;
+}
 #cardsBtn:hover, #decksBtn:hover{
     background-color: #3498DB;
     padding: 13px;
@@ -140,9 +162,10 @@
 }
 
 
-#viewBtn, #changeBtn{
+#viewBtn, #selectBtn{
     padding: 7px 15px 7px 15px;
     margin-top: 10px;
+    margin-left: 30%;
     border-style: none;
     outline-style: none;
     border-radius: 5px;
@@ -150,6 +173,7 @@
     background-color: #fefefe; 
     color: #2980B9;
     font-weight: bold;
+    cursor: pointer;
 
 
 }
@@ -158,9 +182,20 @@
     margin-right: 10px;
 }
 
-#viewBtn:hover, #changeBtn:hover{
+#viewBtn:hover, #selectBtn:hover{
     background-color: #3498DB;
     color: #fefefe;
     transition-duration: 250ms;
 }
 
+#deckname, #description, #category{
+    margin: 0;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#yourDeckTitle{
+    margin-top: 50px;
+    margin-bottom: 20px; 
+    text-align: left;
+}

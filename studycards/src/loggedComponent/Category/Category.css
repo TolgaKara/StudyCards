@@ -1,0 +1,39 @@
+.categoryTitle{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.categoryTitle h1 {
+    text-align: left;
+}
+
+#editBtn{
+    margin: 20px 40% 20px 40%;
+    top: 0px;
+    position: relative;
+
+    border-style: none;
+    outline-style: none;
+
+    border-radius: 5px;
+    background-color: #2980B9;
+    color: #fefefe;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px gray
+}
+#editBtn:hover{
+    box-shadow: 5px 5px 15px grey;
+    bottom: 3px;
+
+    transition-duration: 300ms;
+
+}
+#decksDropIcon{
+    color:#fefefe;
+    font-size: 20px;
+    text-align: center;
+}
+#catName{
+    margin-top: 10px;
+}
