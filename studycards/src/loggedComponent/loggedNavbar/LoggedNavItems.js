@@ -12,34 +12,12 @@ class LoggedNavItems extends React.Component{
             name: "",
             firstname: ""
         }
-        // this.getUserFullName = this.getUserFullName.bind(this)
     }
     
     logoutUser(){
         fire.auth().signOut()
     }
 
-    //  getUserFullName(){
-    //     fire.firestore().collection('user').where(fire.auth().currentUser.email, "==", "fire.firestore().collection(user).get(email)").get().then(snapshot =>{
-    //         snapshot.docs.forEach(doc =>{
-    //             this.setState({
-    //             firstname: doc.data().firstname,
-    //             name: doc.data().name
-    //             })
-                
-    //         })
-    //     })
-         
-    
-    // }
-
-    // // getUserEmail(){
-    // //     fire.database().ref("user").once
-    // // }
-
-    // componentDidMount(){
-    //     this.getUserFullName()
-    // }
 
 
     render(){

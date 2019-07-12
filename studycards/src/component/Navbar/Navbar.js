@@ -19,24 +19,4 @@ class Navbar extends Component {
     }
 }
 
-
-
-
-
-// function Navbar(){
-//     return(
-//         <div className="Navbar">
-//             <img className="Slogo" src={Slogo} alt="Logo of Studydrive"/>
-//             <Nlnavitem />
-//             <Mobile />
-        
-
-
-
-//         </div>
-
-//     )
-// }
-
-
 export default Navbar

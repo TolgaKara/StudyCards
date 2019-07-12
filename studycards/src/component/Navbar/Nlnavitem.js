@@ -24,8 +24,8 @@ class Nlnavitem extends React.Component{
                 </ul>
             </div>
     )
-    }
-    }
+}
+}
 
 
 

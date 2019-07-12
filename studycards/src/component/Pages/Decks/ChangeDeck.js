@@ -1,7 +1,7 @@
 import React from "react"
 import fire from "../config/Firebase";
 
-//TODO Realtime Update
+
 class ChangeDeck extends React.Component{
     constructor(){
         super()

@@ -38,7 +38,10 @@ class Impressum extends React.Component{
                     Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. 
                     Volutpat diam ut venenatis tellus in.
                 </p>
-
+                <h2>Location:</h2>
+                <p>
+                <iframe id="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4858.443700978946!2d13.524395696337471!3d52.49322360918651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8492eece13641%3A0xa5a500f6ace6b241!2sTreskowallee%2FHTW+(Berlin)!5e0!3m2!1sen!2sde!4v1558872361627!5m2!1sen!2sde" width="600" height="550" frameborder="0" allowfullscreen></iframe>
+                </p>
 
             </div>
             </div>

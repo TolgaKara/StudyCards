@@ -16,7 +16,6 @@ class Sign extends React.Component{
         }
         this.onChange = this.onChange.bind(this)
         this.createUser = this.createUser.bind(this)
-        // this.newUser = this.newUser.bind(this)
         
 
     }

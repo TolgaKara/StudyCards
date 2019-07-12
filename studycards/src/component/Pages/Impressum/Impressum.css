@@ -9,3 +9,9 @@
 .Impressum p {
     margin-right: 40%;
 }
+
+#googleMaps{
+    margin-left: 30px;
+    margin-bottom: 10%;
+    box-shadow: 20px 10px 20px grey;
+}
