@@ -1,7 +1,7 @@
 <strong>StudyCards</strong>
 <p>In der Vorlesung WebTech sollte jeder eine eigene Webseite programmieren und das Thema war jedem selbst überlassen.</br>
 Ich hab mich für StudyCards entschieden. Es ist ein Kartensystem, wo man die Frage und die Antwort selber schreibt.</br>
-Es soll eine unterstützende Funktion beim lernen sein.</p>
+Es soll eine unterstützende Funktion beim Lernen sein.</p>
 </br>
 <strong>Programmierung</strong>
 <p>StudyCards wurde in React, ein Framework von Facebook, welches die Performance steigern soll, programmiert. </br>
